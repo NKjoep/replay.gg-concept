@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Replay {{unique id here}} - Replay.gg - {{tag line here}}</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<style>
+			body {
+				padding: 2em 0;
+			}
+			img.type {
+				width: 32px;
+			}
+			[aria-expanded="true"] { /* this prevent to close the opened panels... */
+				/* pointer-events: none; */
+			}
+			footer {
+				margin-top: 2em;
+			}
+		</style>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="text-center">
+						<img src="http://www.replay.gg/images/logo.png">
+					</p>
+					<p class="small">How to launch your replay</p>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="windows">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#toggler-windows" aria-expanded="true" aria-controls="toggler-windows">
+										<img src="http://www.replay.gg/images/winlogo.png" class="type">
+										&ensp;
+										Windows
+									</a>
+								</h4>
+							</div>
+							<div id="toggler-windows" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="windows">
+								<div class="panel-body">
+									<ol>
+										<li>Make sure your LoL Client is open</li>
+										<li>Paste code below into a <a href="http://windows.microsoft.com/en-us/windows-vista/open-a-command-prompt-window" target="_blank">Command Prompt</a></li>
+									  <li>press Enter</li>
+									</ol>
+									<pre>powershell clear;if(Get-Process \"LolClient\" -ErrorAction SilentlyContinue){$ErrorActionPreference=\"Stop\";$c=New-Object Net.Sockets.TcpClient;$c.Connect(\"127.0.0.1\",8393);$c.GetStream().write((0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),0,86);Exit;}\"Error. Please make sure your LoL client is running.\";</pre>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="windows-alt">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#toggler-windows-alt" aria-expanded="false" aria-controls="toggler-windows-alt">
+										<img src="http://www.replay.gg/images/winlogo.png" class="type">
+										&ensp;
+										Windows &mdash; Alternative
+									</a>
+								</h4>
+							</div>
+							<div id="toggler-windows-alt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="windows-alt">
+								<div class="panel-body">
+									<ol>
+										<li>Download the <button class="btn btn-xs btn-primary">Batch file</button></li>
+									  <li>Open the downladed batch file (enter on it or double click)</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="mac">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#toggler-mac" aria-expanded="false" aria-controls="toggler-mac">
+										<img src="http://www.replay.gg/images/maclogo.png" class="type">
+										&ensp;
+										Mac OS
+									</a>
+								</h4>
+							</div>
+							<div id="toggler-mac" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mac">
+								<div class="panel-body">
+									<ol>
+										<li>Make sure your LoL Client is open</li>
+										<li>Paste code below into a <a href="https://youtu.be/zw7Nd67_aFw?t=20s" target="_blank">Terminal</a></li>
+									  <li>press Enter</li>
+									</ol>
+
+									<pre>echo -e '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' | nc 127.0.0.1 8393</pre>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="mac-alt">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#toggler-mac-alt" aria-expanded="false" aria-controls="toggler-mac-alt">
+										<img src="http://www.replay.gg/images/maclogo.png" class="type">
+										&ensp;
+										Mac OS &mdash; Alternative
+									</a>
+								</h4>
+							</div>
+							<div id="toggler-mac-alt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mac-alt">
+								<div class="panel-body">
+									<ol>
+										<li>Paste code below into a Terminal</li>
+										<li>press Enter</li>
+									</ol>
+									<pre>cd /Applications/League\ of\ Legends.app/Contents/LoL/RADS/solutions/lol_game_client_sln/releases/ && cd $(ls -1vr | head -1) && cd deploy/LeagueOfLegends.app/Contents/MacOS && riot_launched=true ./LeagueofLegends 8394 LoLLauncher "" "replay replay.gg:8080 000000000000000000000000000000/t 0000000000 0000"</pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<footer class="col-xs-12 col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-md-4 text-left"><!-- maybe something here at left... --></div>
+								<div class="col-xs-12 col-md-4 text-center">
+									<p class="text-muted">&copy; 2015 Replay.gg</p>
+									<p>
+										<a href="https://twitter.com/ReplayDotGG">
+											<img src="http://www.replay.gg/images/twitter.png" width="16px">
+										</a>
+									</p>
+								</div>
+								<div class="col-xs-12 col-md-4 text-right"><!-- maybe something here at right... --></div>
+							</div>
+					</footer>
+				</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
+</html>
